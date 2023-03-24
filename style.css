@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Tilt Neon', cursive;
+    background-color: #242424;
+    background-repeat: no-repeat;
+    max-width: 1400px;
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    padding: 2.0rem;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: -1/1;
+
+}
+
+header h2{
+    cursor: pointer;
+    font-size: 35px;
+    margin-left: 2.0rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #d7d8e0;
+    letter-spacing: 4px;
+}
+
+header h2:hover{
+    color: #9D50BB;
+    transition: 0.3s ease;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header ul li{
+    font-size: 3vh;
+    margin: 30px;
+    padding-right: 15px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin: 5px;
+    text-shadow: 2px 2px #d7d8e0;
+
+}
+
+header ul li a:hover{
+    color: #9D50BB;
+    transition: 0.3s ease;
+}
+
+.hero-section{
+    display: flex;
+    min-height: 100%;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+    display: flex;
+    cursor: pointer;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    list-style: none;
+    margin-inline: 20px;
+    width: 200px;
+    transition: .3s ease;
+}
+
+.card::before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.card-background{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    background-size: 230px;
+    background-position: center;
+    filter: brightness(1) saturate(1) contrast(1);
+    transition: .3s ease;
+    transform: scale(1) translateZ(0);
+}
+
+.card:hover .card-background{
+    transform: scale(1.60) translate(0.9);
+    background-size: 240px;
+}
+
+.card-container:hover .card:not(:hover){
+    transform: scale(.9);
+}
+
+.card-container:hover > .card:not(:hover) .card-background,
+.card-container:hover > .card:not(:hover) .card-category{
+    filter: brightness(.5) saturate(0) contrast(1.2);
+}
+
+.content{
+    top: 50%;
+    left: 0;
+    padding: 25px;
+    position: absolute;
+}
+
+.card-category{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card-heading{
+    color: #fff;
+    font-size: 25px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px #d7d8e0;
+    color: rgb(0, 0, 0);
+}
